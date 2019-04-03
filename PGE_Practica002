@@ -1,0 +1,25 @@
+int ledBlanco = 3;
+int pot=A0;
+int valorpot=0;
+int valorpot1=0;
+int valorled=0;
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(ledBlanco,OUTPUT);
+
+//map(valorpot,0,1024,0,255);
+Serial.begin(9600); 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  valorpot=analogRead(pot);
+  valorpot1=map(valorpot,0,1023,0,255);
+  analogWrite(ledBlanco,valorpot1);
+  Serial.println(valorpot);
+  Serial.println(valorpot1);
+  Serial.println("----------");
+  delay(1000);
+
+}
