@@ -1,0 +1,17 @@
+int inputpot=A0;
+int outputled=3;
+int valuesensor=0;
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(3,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  valuesensor=analogRead(A0);
+  digitalWrite(3,HIGH);
+  delay(valuesensor);
+  digitalWrite(3,LOW);
+  delay(valuesensor);
+  }
