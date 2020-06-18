@@ -143,7 +143,7 @@ if (!client.connected()) {
   client.loop();
 
   long now = millis();
-  if (now - lastMsg > 5000) {
+  if (now - lastMsg > 300000) {
     lastMsg = now;
 
   
